@@ -1,0 +1,1223 @@
+<div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a
+
+        href="https://github.com/jquense/date-math"
+
+    >date-arithmetic (v3.1.0)</a>
+</h1>
+<h4>simple date math util</h4>
+<div class="apidocSectionDiv"><a
+    href="#apidoc.tableOfContents"
+    id="apidoc.tableOfContents"
+><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.date-arithmetic">module date-arithmetic</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.date-arithmetic.add">
+            function <span class="apidocSignatureSpan">date-arithmetic.</span>add
+            <span class="apidocSignatureSpan">(date, num, unit)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.date-arithmetic.century">
+            function <span class="apidocSignatureSpan">date-arithmetic.</span>century
+            <span class="apidocSignatureSpan">(date, val)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.date-arithmetic.date">
+            function <span class="apidocSignatureSpan">date-arithmetic.</span>date
+            <span class="apidocSignatureSpan">(date, val)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.date-arithmetic.day">
+            function <span class="apidocSignatureSpan">date-arithmetic.</span>day
+            <span class="apidocSignatureSpan">(date, val)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.date-arithmetic.decade">
+            function <span class="apidocSignatureSpan">date-arithmetic.</span>decade
+            <span class="apidocSignatureSpan">(date, val)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.date-arithmetic.diff">
+            function <span class="apidocSignatureSpan">date-arithmetic.</span>diff
+            <span class="apidocSignatureSpan">(date1, date2, unit, asFloat)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.date-arithmetic.endOf">
+            function <span class="apidocSignatureSpan">date-arithmetic.</span>endOf
+            <span class="apidocSignatureSpan">(date, unit, firstOfWeek)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.date-arithmetic.eq">
+            function <span class="apidocSignatureSpan">date-arithmetic.</span>eq
+            <span class="apidocSignatureSpan">(a, b, unit)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.date-arithmetic.gt">
+            function <span class="apidocSignatureSpan">date-arithmetic.</span>gt
+            <span class="apidocSignatureSpan">(a, b, unit)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.date-arithmetic.gte">
+            function <span class="apidocSignatureSpan">date-arithmetic.</span>gte
+            <span class="apidocSignatureSpan">(a, b, unit)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.date-arithmetic.hours">
+            function <span class="apidocSignatureSpan">date-arithmetic.</span>hours
+            <span class="apidocSignatureSpan">(date, val)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.date-arithmetic.inRange">
+            function <span class="apidocSignatureSpan">date-arithmetic.</span>inRange
+            <span class="apidocSignatureSpan">(day, min, max, unit)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.date-arithmetic.lt">
+            function <span class="apidocSignatureSpan">date-arithmetic.</span>lt
+            <span class="apidocSignatureSpan">(a, b, unit)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.date-arithmetic.lte">
+            function <span class="apidocSignatureSpan">date-arithmetic.</span>lte
+            <span class="apidocSignatureSpan">(a, b, unit)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.date-arithmetic.max">
+            function <span class="apidocSignatureSpan">date-arithmetic.</span>max
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.date-arithmetic.milliseconds">
+            function <span class="apidocSignatureSpan">date-arithmetic.</span>milliseconds
+            <span class="apidocSignatureSpan">(date, val)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.date-arithmetic.min">
+            function <span class="apidocSignatureSpan">date-arithmetic.</span>min
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.date-arithmetic.minutes">
+            function <span class="apidocSignatureSpan">date-arithmetic.</span>minutes
+            <span class="apidocSignatureSpan">(date, val)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.date-arithmetic.month">
+            function <span class="apidocSignatureSpan">date-arithmetic.</span>month
+            <span class="apidocSignatureSpan">(date, val)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.date-arithmetic.neq">
+            function <span class="apidocSignatureSpan">date-arithmetic.</span>neq
+            <span class="apidocSignatureSpan">(a, b, unit)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.date-arithmetic.seconds">
+            function <span class="apidocSignatureSpan">date-arithmetic.</span>seconds
+            <span class="apidocSignatureSpan">(date, val)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.date-arithmetic.startOf">
+            function <span class="apidocSignatureSpan">date-arithmetic.</span>startOf
+            <span class="apidocSignatureSpan">(date, unit, firstOfWeek)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.date-arithmetic.subtract">
+            function <span class="apidocSignatureSpan">date-arithmetic.</span>subtract
+            <span class="apidocSignatureSpan">(date, num, unit)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.date-arithmetic.weekday">
+            function <span class="apidocSignatureSpan">date-arithmetic.</span>weekday
+            <span class="apidocSignatureSpan">(date, val, firstDay)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.date-arithmetic.year">
+            function <span class="apidocSignatureSpan">date-arithmetic.</span>year
+            <span class="apidocSignatureSpan">(date, val)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.date-arithmetic" id="apidoc.module.date-arithmetic">module date-arithmetic</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.date-arithmetic.add" id="apidoc.element.date-arithmetic.add">
+        function <span class="apidocSignatureSpan">date-arithmetic.</span>add
+        <span class="apidocSignatureSpan">(date, num, unit)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">add = function (date, num, unit) {
+  date = new Date(date)
+
+  switch (unit){
+    case MILI:
+    case SECONDS:
+    case MINUTES:
+    case HOURS:
+    case YEAR:
+      return dates[unit](date, dates[unit](date) + num)
+    case DAY:
+      return dates.date(date, dates.date(date) + num)
+    case WEEK:
+      return dates.date(date, dates.date(date) + (7 * num))
+    case MONTH:
+      return monthMath(date, num)
+    case DECADE:
+      return dates.year(date, dates.year(date) + (num * 10))
+    case CENTURY:
+      return dates.year(date, dates.year(date) + (num * 100))
+  }
+
+  throw new TypeError(&#x27;Invalid units: &#x22;&#x27; + unit + &#x27;&#x22;&#x27;)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+Valid unit values are; `&#x22;milliseconds&#x22;, &#x22;second&#x22;, &#x22;minutes&#x22;, &#x22;hours&#x22;, &#x22;day&#x22;, &#
+x22;weekday&#x22;, &#x22;month&#x22;, &#x22;year&#x22;, &#x22;decade&#x22;, &#x22;century&#x22;`.
+
+### Math Functions
+
+Arithmetic functions
+
+- `dateMath.<span class="apidocCodeKeywordSpan">add</span>(date, value, unit)`
+- `dateMath.subtract(date, value, unit)`
+- `dateMath.eq(dateA, dateB)`
+- `dateMath.neq(dateA, dateB)`
+- `dateMath.gte(dateA, dateB)`
+- `dateMath.gt(dateA, dateB)`
+- `dateMath.lte(dateA, dateB)`
+- `dateMath.lt(dateA, dateB)`
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.date-arithmetic.century" id="apidoc.element.date-arithmetic.century">
+        function <span class="apidocSignatureSpan">date-arithmetic.</span>century
+        <span class="apidocSignatureSpan">(date, val)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">century = function (date, val) {
+  return val === undefined
+    ? dates.year(dates.startOf(date, CENTURY))
+    : dates.add(date, val + 100, YEAR);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+- `dateMath.hours(date, [value])`
+- `dateMath.date(date, [value])`
+- `dateMath.day(date, [value])`
+- `dateMath.weekday(date, [value], [firstOfWeek = 0])`
+- `dateMath.month(date, [value])`
+- `dateMath.year(date, [value])`
+- `dateMath.decade(date, [value])`
+- `dateMath.<span class="apidocCodeKeywordSpan">century</span>(date, [value])`
+
+### `startOf(data, unit, [firstOfWeek = 0])`
+
+return a new date with the relevent date parts zero&#x27;d out. You only need to provide a `firstOfWeek` when the unit is `&#x27
+;week&#x27;`
+
+dateMath.startOf(new Date, &#x27;day&#x27;) // -&#x3e; no time components
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.date-arithmetic.date" id="apidoc.element.date-arithmetic.date">
+        function <span class="apidocSignatureSpan">date-arithmetic.</span>date
+        <span class="apidocSignatureSpan">(date, val)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">date = function (date, val){
+  if (val === undefined)
+    return date[&#x27;get&#x27; + method]()
+
+  date = new Date(date)
+  date[&#x27;set&#x27; + method](val)
+  return date
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+get and set date part values.
+
+- `dateMath.milliseconds(date, [value])`
+- `dateMath.seconds(date, [value])`
+- `dateMath.minutes(date, [value])`
+- `dateMath.hours(date, [value])`
+- `dateMath.<span class="apidocCodeKeywordSpan">date</span>(date, [value])`
+- `dateMath.day(date, [value])`
+- `dateMath.weekday(date, [value], [firstOfWeek = 0])`
+- `dateMath.month(date, [value])`
+- `dateMath.year(date, [value])`
+- `dateMath.decade(date, [value])`
+- `dateMath.century(date, [value])`
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.date-arithmetic.day" id="apidoc.element.date-arithmetic.day">
+        function <span class="apidocSignatureSpan">date-arithmetic.</span>day
+        <span class="apidocSignatureSpan">(date, val)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">day = function (date, val){
+  if (val === undefined)
+    return date[&#x27;get&#x27; + method]()
+
+  date = new Date(date)
+  date[&#x27;set&#x27; + method](val)
+  return date
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+get and set date part values.
+
+- `dateMath.milliseconds(date, [value])`
+- `dateMath.seconds(date, [value])`
+- `dateMath.minutes(date, [value])`
+- `dateMath.hours(date, [value])`
+- `dateMath.date(date, [value])`
+- `dateMath.<span class="apidocCodeKeywordSpan">day</span>(date, [value])`
+- `dateMath.weekday(date, [value], [firstOfWeek = 0])`
+- `dateMath.month(date, [value])`
+- `dateMath.year(date, [value])`
+- `dateMath.decade(date, [value])`
+- `dateMath.century(date, [value])`
+
+### `startOf(data, unit, [firstOfWeek = 0])`
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.date-arithmetic.decade" id="apidoc.element.date-arithmetic.decade">
+        function <span class="apidocSignatureSpan">date-arithmetic.</span>decade
+        <span class="apidocSignatureSpan">(date, val)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">decade = function (date, val) {
+  return val === undefined
+    ? dates.year(dates.startOf(date, DECADE))
+    : dates.add(date, val + 10, YEAR);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+- `dateMath.minutes(date, [value])`
+- `dateMath.hours(date, [value])`
+- `dateMath.date(date, [value])`
+- `dateMath.day(date, [value])`
+- `dateMath.weekday(date, [value], [firstOfWeek = 0])`
+- `dateMath.month(date, [value])`
+- `dateMath.year(date, [value])`
+- `dateMath.<span class="apidocCodeKeywordSpan">decade</span>(date, [value])`
+- `dateMath.century(date, [value])`
+
+### `startOf(data, unit, [firstOfWeek = 0])`
+
+return a new date with the relevent date parts zero&#x27;d out. You only need to provide a `firstOfWeek` when the unit is `&#x27
+;week&#x27;`
+
+dateMath.startOf(new Date, &#x27;day&#x27;) // -&#x3e; no time components
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.date-arithmetic.diff" id="apidoc.element.date-arithmetic.diff">
+        function <span class="apidocSignatureSpan">date-arithmetic.</span>diff
+        <span class="apidocSignatureSpan">(date1, date2, unit, asFloat)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">diff = function (date1, date2, unit, asFloat) {
+  var dividend, divisor, result;
+
+  switch (unit) {
+    case MILI:
+    case SECONDS:
+    case MINUTES:
+    case HOURS:
+    case DAY:
+    case WEEK:
+      dividend = date2.getTime() - date1.getTime(); break;
+    case MONTH:
+    case YEAR:
+    case DECADE:
+    case CENTURY:
+      dividend = (dates.year(date2) - dates.year(date1)) * 12 + dates.month(date2) - dates.month(date1); break;
+    default:
+      throw new TypeError(&#x27;Invalid units: &#x22;&#x27; + unit + &#x27;&#x22;&#x27;);
+  }
+
+  switch (unit) {
+    case MILI:
+        divisor = 1; break;
+    case SECONDS:
+        divisor = 1000; break;
+    case MINUTES:
+        divisor = 1000 * 60; break;
+    case HOURS:
+        divisor = 1000 * 60 * 60; break;
+    case DAY:
+        divisor = 1000 * 60 * 60 * 24; break;
+    case WEEK:
+        divisor = 1000 * 60 * 60 * 24 * 7; break;
+    case MONTH:
+        divisor = 1; break;
+    case YEAR:
+        divisor = 12; break;
+    case DECADE:
+        divisor = 120; break;
+    case CENTURY:
+        divisor = 1200; break;
+    default:
+      throw new TypeError(&#x27;Invalid units: &#x22;&#x27; + unit + &#x27;&#x22;&#x27;);
+  }
+
+  result = dividend / divisor;
+
+  return asFloat ? result : absoluteFloor(result);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+- `dateMath.gte(dateA, dateB)`
+- `dateMath.gt(dateA, dateB)`
+- `dateMath.lte(dateA, dateB)`
+- `dateMath.lt(dateA, dateB)`
+- `dateMath.inRange(day, min, max, unit)`
+- `dateMath.min(dateA, dateB, dateN)`
+- `dateMath.max(dateA, dateB, dateN)`
+- `dateMath.<span class="apidocCodeKeywordSpan">diff</span>(dateA, dateB, unit, asFloat)`
+
+Valid unit values are; `&#x22;second&#x22;, &#x22;minutes&#x22;, &#x22;hours&#x22;, &#x22;day&#x22;, &#x22;week&#x22;, &#x22;month
+&#x22;, &#x22;year&#x22;, &#x22;decade&#x22;, &#x22;century&#x22; `
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.date-arithmetic.endOf" id="apidoc.element.date-arithmetic.endOf">
+        function <span class="apidocSignatureSpan">date-arithmetic.</span>endOf
+        <span class="apidocSignatureSpan">(date, unit, firstOfWeek)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">endOf = function (date, unit, firstOfWeek){
+  date = new Date(date)
+  date = dates.startOf(date, unit, firstOfWeek)
+  date = dates.add(date, 1, unit)
+  date = dates.subtract(date, 1, MILI)
+  return date
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+Valid unit values are; `&#x22;second&#x22;, &#x22;minutes&#x22;, &#x22;hours&#x22;, &#x22;day&#x22;, &#x22;week&#x22;, &#x22;month
+&#x22;, &#x22;year&#x22;, &#x22;decade&#x22;, &#x22;century&#x22; `
+
+
+### `endOf(data, unit)`
+
+the opposite of `startOf`
+
+    dateMath.<span class="apidocCodeKeywordSpan">endOf</span>(new Date, &#x27;day&#x27;) // -&#x3e; one millisecond before tomorrow
+
+Valid unit values are; `&#x22;milliseconds&#x22;, &#x22;second&#x22;, &#x22;minutes&#x22;, &#x22;hours&#x22;, &#x22;day&#x22;, &#
+x22;weekday&#x22;, &#x22;month&#x22;, &#x22;year&#x22;, &#x22;decade&#x22;, &#x22;century&#x22;`.
+
+### Math Functions
+
+Arithmetic functions
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.date-arithmetic.eq" id="apidoc.element.date-arithmetic.eq">
+        function <span class="apidocSignatureSpan">date-arithmetic.</span>eq
+        <span class="apidocSignatureSpan">(a, b, unit)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">eq = function (a, b, unit) {
+  return operator(+dates.startOf(a, unit), +dates.startOf(b, unit))
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+### Math Functions
+
+Arithmetic functions
+
+- `dateMath.add(date, value, unit)`
+- `dateMath.subtract(date, value, unit)`
+- `dateMath.<span class="apidocCodeKeywordSpan">eq</span>(dateA, dateB)`
+- `dateMath.neq(dateA, dateB)`
+- `dateMath.gte(dateA, dateB)`
+- `dateMath.gt(dateA, dateB)`
+- `dateMath.lte(dateA, dateB)`
+- `dateMath.lt(dateA, dateB)`
+- `dateMath.inRange(day, min, max, unit)`
+- `dateMath.min(dateA, dateB, dateN)`
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.date-arithmetic.gt" id="apidoc.element.date-arithmetic.gt">
+        function <span class="apidocSignatureSpan">date-arithmetic.</span>gt
+        <span class="apidocSignatureSpan">(a, b, unit)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">gt = function (a, b, unit) {
+  return operator(+dates.startOf(a, unit), +dates.startOf(b, unit))
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+Arithmetic functions
+
+- `dateMath.add(date, value, unit)`
+- `dateMath.subtract(date, value, unit)`
+- `dateMath.eq(dateA, dateB)`
+- `dateMath.neq(dateA, dateB)`
+- `dateMath.gte(dateA, dateB)`
+- `dateMath.<span class="apidocCodeKeywordSpan">gt</span>(dateA, dateB)`
+- `dateMath.lte(dateA, dateB)`
+- `dateMath.lt(dateA, dateB)`
+- `dateMath.inRange(day, min, max, unit)`
+- `dateMath.min(dateA, dateB, dateN)`
+- `dateMath.max(dateA, dateB, dateN)`
+- `dateMath.diff(dateA, dateB, unit, asFloat)`
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.date-arithmetic.gte" id="apidoc.element.date-arithmetic.gte">
+        function <span class="apidocSignatureSpan">date-arithmetic.</span>gte
+        <span class="apidocSignatureSpan">(a, b, unit)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">gte = function (a, b, unit) {
+  return operator(+dates.startOf(a, unit), +dates.startOf(b, unit))
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+Arithmetic functions
+
+- `dateMath.add(date, value, unit)`
+- `dateMath.subtract(date, value, unit)`
+- `dateMath.eq(dateA, dateB)`
+- `dateMath.neq(dateA, dateB)`
+- `dateMath.<span class="apidocCodeKeywordSpan">gte</span>(dateA, dateB)`
+- `dateMath.gt(dateA, dateB)`
+- `dateMath.lte(dateA, dateB)`
+- `dateMath.lt(dateA, dateB)`
+- `dateMath.inRange(day, min, max, unit)`
+- `dateMath.min(dateA, dateB, dateN)`
+- `dateMath.max(dateA, dateB, dateN)`
+- `dateMath.diff(dateA, dateB, unit, asFloat)`
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.date-arithmetic.hours" id="apidoc.element.date-arithmetic.hours">
+        function <span class="apidocSignatureSpan">date-arithmetic.</span>hours
+        <span class="apidocSignatureSpan">(date, val)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">hours = function (date, val){
+  if (val === undefined)
+    return date[&#x27;get&#x27; + method]()
+
+  date = new Date(date)
+  date[&#x27;set&#x27; + method](val)
+  return date
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+### Accessors
+
+get and set date part values.
+
+- `dateMath.milliseconds(date, [value])`
+- `dateMath.seconds(date, [value])`
+- `dateMath.minutes(date, [value])`
+- `dateMath.<span class="apidocCodeKeywordSpan">hours</span>(date, [value])`
+- `dateMath.date(date, [value])`
+- `dateMath.day(date, [value])`
+- `dateMath.weekday(date, [value], [firstOfWeek = 0])`
+- `dateMath.month(date, [value])`
+- `dateMath.year(date, [value])`
+- `dateMath.decade(date, [value])`
+- `dateMath.century(date, [value])`
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.date-arithmetic.inRange" id="apidoc.element.date-arithmetic.inRange">
+        function <span class="apidocSignatureSpan">date-arithmetic.</span>inRange
+        <span class="apidocSignatureSpan">(day, min, max, unit)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">inRange = function (day, min, max, unit){
+  unit = unit || &#x27;day&#x27;
+
+  return (!min || dates.gte(day, min, unit))
+      &#x26;&#x26; (!max || dates.lte(day, max, unit))
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+- `dateMath.subtract(date, value, unit)`
+- `dateMath.eq(dateA, dateB)`
+- `dateMath.neq(dateA, dateB)`
+- `dateMath.gte(dateA, dateB)`
+- `dateMath.gt(dateA, dateB)`
+- `dateMath.lte(dateA, dateB)`
+- `dateMath.lt(dateA, dateB)`
+- `dateMath.<span class="apidocCodeKeywordSpan">inRange</span>(day, min, max, unit)`
+- `dateMath.min(dateA, dateB, dateN)`
+- `dateMath.max(dateA, dateB, dateN)`
+- `dateMath.diff(dateA, dateB, unit, asFloat)`
+
+Valid unit values are; `&#x22;second&#x22;, &#x22;minutes&#x22;, &#x22;hours&#x22;, &#x22;day&#x22;, &#x22;week&#x22;, &#x22;month
+&#x22;, &#x22;year&#x22;, &#x22;decade&#x22;, &#x22;century&#x22; `
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.date-arithmetic.lt" id="apidoc.element.date-arithmetic.lt">
+        function <span class="apidocSignatureSpan">date-arithmetic.</span>lt
+        <span class="apidocSignatureSpan">(a, b, unit)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">lt = function (a, b, unit) {
+  return operator(+dates.startOf(a, unit), +dates.startOf(b, unit))
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+- `dateMath.add(date, value, unit)`
+- `dateMath.subtract(date, value, unit)`
+- `dateMath.eq(dateA, dateB)`
+- `dateMath.neq(dateA, dateB)`
+- `dateMath.gte(dateA, dateB)`
+- `dateMath.gt(dateA, dateB)`
+- `dateMath.lte(dateA, dateB)`
+- `dateMath.<span class="apidocCodeKeywordSpan">lt</span>(dateA, dateB)`
+- `dateMath.inRange(day, min, max, unit)`
+- `dateMath.min(dateA, dateB, dateN)`
+- `dateMath.max(dateA, dateB, dateN)`
+- `dateMath.diff(dateA, dateB, unit, asFloat)`
+
+Valid unit values are; `&#x22;second&#x22;, &#x22;minutes&#x22;, &#x22;hours&#x22;, &#x22;day&#x22;, &#x22;week&#x22;, &#x22;month
+&#x22;, &#x22;year&#x22;, &#x22;decade&#x22;, &#x22;century&#x22; `
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.date-arithmetic.lte" id="apidoc.element.date-arithmetic.lte">
+        function <span class="apidocSignatureSpan">date-arithmetic.</span>lte
+        <span class="apidocSignatureSpan">(a, b, unit)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">lte = function (a, b, unit) {
+  return operator(+dates.startOf(a, unit), +dates.startOf(b, unit))
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+- `dateMath.add(date, value, unit)`
+- `dateMath.subtract(date, value, unit)`
+- `dateMath.eq(dateA, dateB)`
+- `dateMath.neq(dateA, dateB)`
+- `dateMath.gte(dateA, dateB)`
+- `dateMath.gt(dateA, dateB)`
+- `dateMath.<span class="apidocCodeKeywordSpan">lte</span>(dateA, dateB)`
+- `dateMath.lt(dateA, dateB)`
+- `dateMath.inRange(day, min, max, unit)`
+- `dateMath.min(dateA, dateB, dateN)`
+- `dateMath.max(dateA, dateB, dateN)`
+- `dateMath.diff(dateA, dateB, unit, asFloat)`
+
+Valid unit values are; `&#x22;second&#x22;, &#x22;minutes&#x22;, &#x22;hours&#x22;, &#x22;day&#x22;, &#x22;week&#x22;, &#x22;month
+&#x22;, &#x22;year&#x22;, &#x22;decade&#x22;, &#x22;century&#x22; `
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.date-arithmetic.max" id="apidoc.element.date-arithmetic.max">
+        function <span class="apidocSignatureSpan">date-arithmetic.</span>max
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">max = function (){
+  return new Date(Math.max.apply(Math, arguments))
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+- `dateMath.neq(dateA, dateB)`
+- `dateMath.gte(dateA, dateB)`
+- `dateMath.gt(dateA, dateB)`
+- `dateMath.lte(dateA, dateB)`
+- `dateMath.lt(dateA, dateB)`
+- `dateMath.inRange(day, min, max, unit)`
+- `dateMath.min(dateA, dateB, dateN)`
+- `dateMath.<span class="apidocCodeKeywordSpan">max</span>(dateA, dateB, dateN)`
+- `dateMath.diff(dateA, dateB, unit, asFloat)`
+
+Valid unit values are; `&#x22;second&#x22;, &#x22;minutes&#x22;, &#x22;hours&#x22;, &#x22;day&#x22;, &#x22;week&#x22;, &#x22;month
+&#x22;, &#x22;year&#x22;, &#x22;decade&#x22;, &#x22;century&#x22; `
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.date-arithmetic.milliseconds" id="apidoc.element.date-arithmetic.milliseconds">
+        function <span class="apidocSignatureSpan">date-arithmetic.</span>milliseconds
+        <span class="apidocSignatureSpan">(date, val)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">milliseconds = function (date, val){
+  if (val === undefined)
+    return date[&#x27;get&#x27; + method]()
+
+  date = new Date(date)
+  date[&#x27;set&#x27; + method](val)
+  return date
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+all api methods return a _new_ date. Date objects are never mutated.
+
+### Accessors
+
+get and set date part values.
+
+- `dateMath.<span class="apidocCodeKeywordSpan">milliseconds</span>(date, [value])`
+- `dateMath.seconds(date, [value])`
+- `dateMath.minutes(date, [value])`
+- `dateMath.hours(date, [value])`
+- `dateMath.date(date, [value])`
+- `dateMath.day(date, [value])`
+- `dateMath.weekday(date, [value], [firstOfWeek = 0])`
+- `dateMath.month(date, [value])`
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.date-arithmetic.min" id="apidoc.element.date-arithmetic.min">
+        function <span class="apidocSignatureSpan">date-arithmetic.</span>min
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">min = function (){
+  return new Date(Math.min.apply(Math, arguments))
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+- `dateMath.eq(dateA, dateB)`
+- `dateMath.neq(dateA, dateB)`
+- `dateMath.gte(dateA, dateB)`
+- `dateMath.gt(dateA, dateB)`
+- `dateMath.lte(dateA, dateB)`
+- `dateMath.lt(dateA, dateB)`
+- `dateMath.inRange(day, min, max, unit)`
+- `dateMath.<span class="apidocCodeKeywordSpan">min</span>(dateA, dateB, dateN)`
+- `dateMath.max(dateA, dateB, dateN)`
+- `dateMath.diff(dateA, dateB, unit, asFloat)`
+
+Valid unit values are; `&#x22;second&#x22;, &#x22;minutes&#x22;, &#x22;hours&#x22;, &#x22;day&#x22;, &#x22;week&#x22;, &#x22;month
+&#x22;, &#x22;year&#x22;, &#x22;decade&#x22;, &#x22;century&#x22; `
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.date-arithmetic.minutes" id="apidoc.element.date-arithmetic.minutes">
+        function <span class="apidocSignatureSpan">date-arithmetic.</span>minutes
+        <span class="apidocSignatureSpan">(date, val)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">minutes = function (date, val){
+  if (val === undefined)
+    return date[&#x27;get&#x27; + method]()
+
+  date = new Date(date)
+  date[&#x27;set&#x27; + method](val)
+  return date
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+### Accessors
+
+get and set date part values.
+
+- `dateMath.milliseconds(date, [value])`
+- `dateMath.seconds(date, [value])`
+- `dateMath.<span class="apidocCodeKeywordSpan">minutes</span>(date, [value])`
+- `dateMath.hours(date, [value])`
+- `dateMath.date(date, [value])`
+- `dateMath.day(date, [value])`
+- `dateMath.weekday(date, [value], [firstOfWeek = 0])`
+- `dateMath.month(date, [value])`
+- `dateMath.year(date, [value])`
+- `dateMath.decade(date, [value])`
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.date-arithmetic.month" id="apidoc.element.date-arithmetic.month">
+        function <span class="apidocSignatureSpan">date-arithmetic.</span>month
+        <span class="apidocSignatureSpan">(date, val)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">month = function (date, val){
+  if (val === undefined)
+    return date[&#x27;get&#x27; + method]()
+
+  date = new Date(date)
+  date[&#x27;set&#x27; + method](val)
+  return date
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+Date Arthmetic
+=================
+
+A simple object containing some date math utils in the spirit of Moment.js. Unlike Moment this module, returns real date objects
+, so it isn&#x27;t chainable.
+
+    var dateMath = require(&#x27;date-arithmetic&#x27;)
+
+    var date = dateMath.<span class="apidocCodeKeywordSpan">month</span>(new Date)
+
+## API
+
+all api methods return a _new_ date. Date objects are never mutated.
+
+### Accessors
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.date-arithmetic.neq" id="apidoc.element.date-arithmetic.neq">
+        function <span class="apidocSignatureSpan">date-arithmetic.</span>neq
+        <span class="apidocSignatureSpan">(a, b, unit)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">neq = function (a, b, unit) {
+  return operator(+dates.startOf(a, unit), +dates.startOf(b, unit))
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+### Math Functions
+
+Arithmetic functions
+
+- `dateMath.add(date, value, unit)`
+- `dateMath.subtract(date, value, unit)`
+- `dateMath.eq(dateA, dateB)`
+- `dateMath.<span class="apidocCodeKeywordSpan">neq</span>(dateA, dateB)`
+- `dateMath.gte(dateA, dateB)`
+- `dateMath.gt(dateA, dateB)`
+- `dateMath.lte(dateA, dateB)`
+- `dateMath.lt(dateA, dateB)`
+- `dateMath.inRange(day, min, max, unit)`
+- `dateMath.min(dateA, dateB, dateN)`
+- `dateMath.max(dateA, dateB, dateN)`
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.date-arithmetic.seconds" id="apidoc.element.date-arithmetic.seconds">
+        function <span class="apidocSignatureSpan">date-arithmetic.</span>seconds
+        <span class="apidocSignatureSpan">(date, val)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">seconds = function (date, val){
+  if (val === undefined)
+    return date[&#x27;get&#x27; + method]()
+
+  date = new Date(date)
+  date[&#x27;set&#x27; + method](val)
+  return date
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+all api methods return a _new_ date. Date objects are never mutated.
+
+### Accessors
+
+get and set date part values.
+
+- `dateMath.milliseconds(date, [value])`
+- `dateMath.<span class="apidocCodeKeywordSpan">seconds</span>(date, [value])`
+- `dateMath.minutes(date, [value])`
+- `dateMath.hours(date, [value])`
+- `dateMath.date(date, [value])`
+- `dateMath.day(date, [value])`
+- `dateMath.weekday(date, [value], [firstOfWeek = 0])`
+- `dateMath.month(date, [value])`
+- `dateMath.year(date, [value])`
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.date-arithmetic.startOf" id="apidoc.element.date-arithmetic.startOf">
+        function <span class="apidocSignatureSpan">date-arithmetic.</span>startOf
+        <span class="apidocSignatureSpan">(date, unit, firstOfWeek)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">startOf = function (date, unit, firstOfWeek) {
+  date = new Date(date)
+
+  switch (unit) {
+    case &#x27;century&#x27;:
+    case &#x27;decade&#x27;:
+    case &#x27;year&#x27;:
+        date = dates.month(date, 0);
+    case &#x27;month&#x27;:
+        date = dates.date(date, 1);
+    case &#x27;week&#x27;:
+    case &#x27;day&#x27;:
+        date = dates.hours(date, 0);
+    case &#x27;hours&#x27;:
+        date = dates.minutes(date, 0);
+    case &#x27;minutes&#x27;:
+        date = dates.seconds(date, 0);
+    case &#x27;seconds&#x27;:
+        date = dates.milliseconds(date, 0);
+  }
+
+  if (unit === DECADE)
+    date = dates.subtract(date, dates.year(date) % 10, &#x27;year&#x27;)
+
+  if (unit === CENTURY)
+    date = dates.subtract(date, dates.year(date) % 100, &#x27;year&#x27;)
+
+  if (unit === WEEK)
+    date = dates.weekday(date, 0, firstOfWeek);
+
+  return date
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+- `dateMath.decade(date, [value])`
+- `dateMath.century(date, [value])`
+
+### `startOf(data, unit, [firstOfWeek = 0])`
+
+return a new date with the relevent date parts zero&#x27;d out. You only need to provide a `firstOfWeek` when the unit is `&#x27
+;week&#x27;`
+
+    dateMath.<span class="apidocCodeKeywordSpan">startOf</span>(new Date, &#x27;day&#x27;) // -&#x3e; no time components
+
+Valid unit values are; `&#x22;second&#x22;, &#x22;minutes&#x22;, &#x22;hours&#x22;, &#x22;day&#x22;, &#x22;week&#x22;, &#x22;month
+&#x22;, &#x22;year&#x22;, &#x22;decade&#x22;, &#x22;century&#x22; `
+
+
+### `endOf(data, unit)`
+
+the opposite of `startOf`
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.date-arithmetic.subtract" id="apidoc.element.date-arithmetic.subtract">
+        function <span class="apidocSignatureSpan">date-arithmetic.</span>subtract
+        <span class="apidocSignatureSpan">(date, num, unit)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">subtract = function (date, num, unit) {
+  return dates.add(date, -num, unit)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+Valid unit values are; `&#x22;milliseconds&#x22;, &#x22;second&#x22;, &#x22;minutes&#x22;, &#x22;hours&#x22;, &#x22;day&#x22;, &#
+x22;weekday&#x22;, &#x22;month&#x22;, &#x22;year&#x22;, &#x22;decade&#x22;, &#x22;century&#x22;`.
+
+### Math Functions
+
+Arithmetic functions
+
+- `dateMath.add(date, value, unit)`
+- `dateMath.<span class="apidocCodeKeywordSpan">subtract</span>(date, value, unit)`
+- `dateMath.eq(dateA, dateB)`
+- `dateMath.neq(dateA, dateB)`
+- `dateMath.gte(dateA, dateB)`
+- `dateMath.gt(dateA, dateB)`
+- `dateMath.lte(dateA, dateB)`
+- `dateMath.lt(dateA, dateB)`
+- `dateMath.inRange(day, min, max, unit)`
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.date-arithmetic.weekday" id="apidoc.element.date-arithmetic.weekday">
+        function <span class="apidocSignatureSpan">date-arithmetic.</span>weekday
+        <span class="apidocSignatureSpan">(date, val, firstDay)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">weekday = function (date, val, firstDay) {
+    var weekday = (dates.day(date) + 7 - (firstDay || 0) ) % 7;
+
+    return val === undefined
+      ? weekday
+      : dates.add(date, val - weekday, DAY);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+- `dateMath.milliseconds(date, [value])`
+- `dateMath.seconds(date, [value])`
+- `dateMath.minutes(date, [value])`
+- `dateMath.hours(date, [value])`
+- `dateMath.date(date, [value])`
+- `dateMath.day(date, [value])`
+- `dateMath.<span class="apidocCodeKeywordSpan">weekday</span>(date, [value], [firstOfWeek = 0])`
+- `dateMath.month(date, [value])`
+- `dateMath.year(date, [value])`
+- `dateMath.decade(date, [value])`
+- `dateMath.century(date, [value])`
+
+### `startOf(data, unit, [firstOfWeek = 0])`
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.date-arithmetic.year" id="apidoc.element.date-arithmetic.year">
+        function <span class="apidocSignatureSpan">date-arithmetic.</span>year
+        <span class="apidocSignatureSpan">(date, val)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">year = function (date, val){
+  if (val === undefined)
+    return date[&#x27;get&#x27; + method]()
+
+  date = new Date(date)
+  date[&#x27;set&#x27; + method](val)
+  return date
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+- `dateMath.seconds(date, [value])`
+- `dateMath.minutes(date, [value])`
+- `dateMath.hours(date, [value])`
+- `dateMath.date(date, [value])`
+- `dateMath.day(date, [value])`
+- `dateMath.weekday(date, [value], [firstOfWeek = 0])`
+- `dateMath.month(date, [value])`
+- `dateMath.<span class="apidocCodeKeywordSpan">year</span>(date, [value])`
+- `dateMath.decade(date, [value])`
+- `dateMath.century(date, [value])`
+
+### `startOf(data, unit, [firstOfWeek = 0])`
+
+return a new date with the relevent date parts zero&#x27;d out. You only need to provide a `firstOfWeek` when the unit is `&#x27
+;week&#x27;`
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
